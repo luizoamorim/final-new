@@ -35,7 +35,7 @@ jobs:
             - name: Build
               run: npm run build
             - name: Post version
-              run: npm run postversion
+              run: npm run before-release
             - name: Release
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

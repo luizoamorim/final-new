@@ -14,7 +14,7 @@
         "prepare": "husky install",
         "pre": "npx prettier --write . && npx eslint --fix",
         "semantic-release": "semantic-release",
-        "postversion": "cp -r package.json dist/"
+        "before-release": "cp -r package.json dist/"
     },
     "author": "luizoamorim",
     "license": "ISC",
