@@ -13,7 +13,8 @@
         "build": "tsc",
         "prepare": "husky install",
         "pre": "npx prettier --write . && npx eslint --fix",
-        "semantic-release": "semantic-release"
+        "semantic-release": "semantic-release",
+        "postversion": "cp -r package.json dist/"
     },
     "author": "luizoamorim",
     "license": "ISC",
@@ -71,11 +72,17 @@
             [
                 "@semantic-release/npm",
                 {
-                    "npmPublish": false,
-                    "tarballDir": "dist"
+                    "pkgRoot": "dist"
                 }
             ],
-            "@semantic-release/git"
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "package.json"
+                    ]
+                }
+            ]
         ],
         "repositoryUrl": "https://github.com/luizoamorim/final-new.git",
         "tagFormat": "v${version}"
