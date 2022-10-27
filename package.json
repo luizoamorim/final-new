@@ -63,12 +63,18 @@
                 "@semantic-release/github",
                 {
                     "assets": [
-                        "dist/**"
+                        "dist/*.tgz"
                     ]
                 }
             ],
             "@semantic-release/changelog",
-            "@semantic-release/npm",
+            [
+                "@semantic-release/npm",
+                {
+                    "npmPublish": false,
+                    "tarballDir": "dist"
+                }
+            ],
             "@semantic-release/git"
         ],
         "repositoryUrl": "https://github.com/luizoamorim/final-new.git",
