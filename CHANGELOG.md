@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/luizoamorim/final-new/compare/v1.5.0...v1.5.1) (2022-10-27)
+
+
+### Bug Fixes
+
+* dist on github plugin ([a9d06c8](https://github.com/luizoamorim/final-new/commit/a9d06c83839c3a7a922a123af65bb93495f08759))
+
 # [1.4.0](https://github.com/luizoamorim/final-new/compare/v1.3.0...v1.4.0) (2022-10-27)
 
 
