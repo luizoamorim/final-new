@@ -2,7 +2,11 @@
     "name": "final-semantic-luizoamorim-2022",
     "version": "1.6.0",
     "description": "",
-    "main": "src/index.ts",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "files": [
+        "dist"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/luizoamorim/final-new.git"
