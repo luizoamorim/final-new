@@ -2,13 +2,15 @@
     "name": "final-semantic-luizoamorim-2022",
     "version": "1.2.0",
     "description": "",
-    "main": "index.ts",
+    "main": "src/index.ts",
     "repository": {
         "type": "git",
         "url": "https://github.com/luizoamorim/final-new.git"
     },
     "scripts": {
+        "start": "ts-node src/index.ts",
         "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc",
         "prepare": "husky install",
         "pre": "npx prettier --write . && npx eslint --fix",
         "semantic-release": "semantic-release"
@@ -20,6 +22,7 @@
         "@commitlint/config-conventional": "^17.1.0",
         "@semantic-release/changelog": "^6.0.1",
         "@semantic-release/git": "^10.0.1",
+        "@types/express": "^4.17.14",
         "@typescript-eslint/eslint-plugin": "^5.41.0",
         "@typescript-eslint/parser": "^5.41.0",
         "commitizen": "^4.2.5",
@@ -30,6 +33,7 @@
         "husky": "^8.0.1",
         "prettier": "2.7.1",
         "semantic-release": "^19.0.5",
+        "ts-node": "^10.9.1",
         "typescript": "^4.8.4"
     },
     "config": {
@@ -57,10 +61,22 @@
             "@semantic-release/release-notes-generator",
             "@semantic-release/npm",
             "@semantic-release/github",
-            "@semantic-release/git",
+            [
+                "@semantic-release/git",
+                {
+                    "assets": [
+                        "dist/",
+                        "package.json",
+                        "CHANGELOG.md"
+                    ]
+                }
+            ],
             "@semantic-release/changelog"
         ],
         "repositoryUrl": "https://github.com/luizoamorim/final-new.git",
         "tagFormat": "v${version}"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
     }
 }
