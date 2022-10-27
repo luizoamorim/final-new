@@ -1,10 +1,6 @@
 {
     "name": "final-semantic-luizoamorim-2022",
-<<<<<<< HEAD
-    "version": "1.2.0",
-=======
     "version": "1.4.0",
->>>>>>> f4512fc44c74857b220189095d27f32d464adc59
     "description": "",
     "main": "src/index.ts",
     "repository": {
