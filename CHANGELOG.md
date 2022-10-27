@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/luizoamorim/final-new/compare/v1.10.0...v1.11.0) (2022-10-27)
+
+
+### Features
+
+* test ([224619d](https://github.com/luizoamorim/final-new/commit/224619d81e092f419709ad0651a85f1e986bd627))
+
 # [1.6.0](https://github.com/luizoamorim/final-new/compare/v1.5.1...v1.6.0) (2022-10-27)
 
 ### Features
