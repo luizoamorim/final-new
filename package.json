@@ -13,8 +13,7 @@
         "build": "tsc",
         "prepare": "husky install",
         "pre": "npx prettier --write . && npx eslint --fix",
-        "semantic-release": "semantic-release",
-        "postversion": "cp -r package.json .. && cp -r npm-shrinkwrap.json .."
+        "semantic-release": "semantic-release"
     },
     "author": "luizoamorim",
     "license": "ISC",
@@ -60,19 +59,15 @@
         "plugins": [
             "@semantic-release/commit-analyzer",
             "@semantic-release/release-notes-generator",
-            [
-                "@semantic-release/npm",
-                {
-                    "pkgRoot": "dist"
-                }
-            ],
+            "@semantic-release/npm",
             "@semantic-release/github",
             [
                 "@semantic-release/git",
                 {
                     "assets": [
-                        "package.json",
-                        "npm-shrinkwrap.json"
+                        "dist/**/*",
+                        "docs",
+                        "package.json"
                     ]
                 }
             ],
