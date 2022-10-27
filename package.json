@@ -12,8 +12,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc",
         "pre": "npx prettier --write . && npx eslint --fix",
-        "semantic-release": "semantic-release",
-        "before-release": "cp -r package.json dist/"
+        "before-release": "cp -r package.json dist/",
+        "semantic-release": "npm run before-release && semantic-release"
     },
     "author": "luizoamorim",
     "license": "ISC",
@@ -63,7 +63,7 @@
                 "@semantic-release/github",
                 {
                     "assets": [
-                        "dist/*.tgz"
+                        "dist/**/*.tgz"
                     ]
                 }
             ],
@@ -78,7 +78,9 @@
                 "@semantic-release/git",
                 {
                     "assets": [
-                        "package.json"
+                        "package.json",
+                        "package-lock.json",
+                        "CHANGELOG.md"
                     ]
                 }
             ]
